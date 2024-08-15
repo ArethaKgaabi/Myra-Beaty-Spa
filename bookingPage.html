@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>booking</title>
+    <a href="pictures.html" target="_blank" rel="noopener noreferrer"></a>
+    <a href="homePage.html" target="_blank" rel="noopener noreferrer"></a>
+    <style>
+      body {
+        background-image: url("background.jpg");
+        background-size: cover;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      /* img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100%;
+        background-position: center;
+      } */
+      ul {
+        list-style: none;
+        text-align: center;
+        padding-bottom: 45px;
+        position: fixed;
+      }
+      li {
+        display: inline;
+        word-spacing: 25px;
+      }
+      .hme {
+        text-decoration-line: none;
+        color: black;
+      }
+
+      .pics {
+        text-decoration-line: none;
+        color: black;
+      }
+      .bk {
+        text-decoration-line: none;
+        color: black;
+      }
+      h3 {
+        text-align: center;
+      }
+      body {
+        background: rgba(37, 3, 35, 0);
+      }
+      /* Form styling */
+      form {
+        padding-bottom: 2px;
+        margin: auto;
+        width: 40%;
+        border: 1px solid white;
+        padding: 80px;
+        line-height: 1.4;
+      }
+      .form-group {
+        font-size: medium;
+      }
+      /* img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+      } */
+
+      /* form division */
+      .row {
+        display: flex;
+      }
+      .column {
+        flex: 50%;
+        padding: 20px;
+      }
+      /* radio battons */
+      #Treatment {
+        text-align: right;
+        padding-right: 10px;
+      }
+      /* Submit button */
+      button {
+        display: block;
+        padding: 5px 10px;
+        margin: 0 auto;
+        margin-top: 15px;
+        background-color: aliceblue;
+        border-radius: 4px;
+        border: 1px solid rgb(198, 195, 195);
+      }
+      /* Discount */
+      .hm {
+        text-decoration-line: none;
+        color: rgb(227, 20, 20);
+        font-weight: 200;
+      }
+      .discount {
+        text-align: center;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/background.jpg" alt="" width="100%" />
+    <header>
+      <ul>
+        <li class="hm">
+          <a href="homePage.html" target="_blank" class="hme">Home</a>
+        </li>
+        <li class="pics">
+          <a href="pictures.html" target="_blank" class="pics">Pictures</a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- FORM -->
+    <form>
+      <h3>Make your booking here👇</h3>
+      <div class="row">
+        <div class="column">
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              size="35"
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Names"
+              size="35"
+              required
+            />
+
+            <br />
+            <div class="form-group">
+              <span><label for="date">Date</label><br /></span>
+              <input type="date" id="date" equired />
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="form-group">
+            <input
+              type="text"
+              id="Contacts"
+              placeholder="Contact details"
+              size="35"
+              required
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              id="Last Name"
+              placeholder="Surname"
+              size="35"
+              required
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="time">Time</label>
+            <span> <input type="time" id="time" required /></span>
+          </div>
+        </div>
+      </div>
+
+      <textarea
+        id="comment"
+        name="w3review"
+        rows="4"
+        cols="80"
+        placeholder="Add special comment"
+      ></textarea>
+      <div class="Treatment">
+        <p>Prefferd Treatment</p>
+        <input type="radio" id="feet" value="Foot " />
+        <label for="">Feet Massage</label><br />
+        <input type="radio" id="body" value="body" />
+        <label for="">Full Body </label><br />
+        <input type="radio" id="facial" value="facial" />
+        <label for="">Facial Treat</label><br />
+        <input type="radio" id="sport" value="sport" />
+        <label for="">Sport Massage</label><br />
+      </div>
+      <div class="Treatment">
+        <p>Treatment Duration</p>
+        <input type="radio" id="foot" value="Foot Massage" />
+        <label for="">15 Minutes</label><br />
+        <input type="radio" id="foot" value="Foot Massage" />
+        <label for="">30 Minutes </label><br />
+        <input type="radio" id="foot" value="Foot Massage" />
+        <label for="">45 Minutes</label><br />
+        <input type="radio" id="foot" value="Foot Massage" />
+        <label for="">60 Minutes</label><br />
+      </div>
+      <button>Submit</button>
+
+      <p class="discount">
+        To receive 20% discount on firt appointment please
+        <span
+          ><a href="signup.html" target="_blank" class="hm">Sign Up</a></span
+        >
+      </p>
+    </form>
+
+    <!-- java scrip -->
+    <script>
+      function submit() {
+        alert(
+          "Thank you for booking with us, a confirmatuin email was sent to you"
+        );
+      }
+      let submitbutton = document.querySelector("button");
+      submitbutton.addEventListener("click", submit);
+    </script>
+  </body>
+</html>
